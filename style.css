@@ -1,0 +1,157 @@
+/* 🌑 Default: Dark Mode */
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ☀️ Light Mode (ko‘zni toliqtirmasligi uchun) */
+body.light-mode {
+    background-color: #2c2c54; /* Qoramtir moviy */
+    color: #ffffff;
+}
+
+/* 🌗 Navbar */
+nav {
+    background: #2d2d44;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ff9800;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+nav ul li a:hover {
+    color: #00ff99;
+    transform: scale(1.1);
+}
+
+/* 📌 Section styling */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 📬 Contact Form */
+.contact-form {
+    margin-top: 20px;
+}
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.input-field:focus, .textarea-field:focus {
+    outline: 2px solid #00ff99;
+}
+.textarea-field {
+    resize: vertical;
+}
+
+/* 🔘 Submit button */
+.submit-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #e68900;
+}
+
+/* 🌗 Toggle Theme Button */
+#toggle-theme {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#toggle-theme:hover {
+    background-color: #e68900;
+}
+
+/* 📸 Project Images */
+.projects img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.projects img:hover {
+    transform: scale(1.1);
+}
+
+/* 🔥 Animatsiyalar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+section, nav, .contact-form {
+    animation: fadeIn 0.8s ease-in-out;
+}
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects img {
+        width: 100%;
+    }
+    #toggle-theme {
+        top: 20px;
+        right: 10px;
+    }
+}
+/* 🖥️ Desktop Design */
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .projects img {
+        width: 200px;
+    }
+    #toggle-theme {
+        top: 10px;
+        right: 20px;
+    }
+}
+/* 🌐 Global Styles */

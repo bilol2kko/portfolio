@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <button id="toggle-theme">🌗 Toggle Mode</button>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>📬 Contact Me</h2>
+        <p class="intro-text">If you’d like to <span class="highlight">work together</span> or have any questions, feel free to reach out!</p>
+    
+        <div class="contact-info">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:bilol2kko2010@gmail.com">example@example.com</a></p>
+        
+            <h3>💼 LinkedIn (I don't have)</h3>
+            <p><a href="#" target="_blank">linkedin.com/in/example</a></p>
+        
+            <h3>📍 Location</h3>
+            <p>Tashkent, Uzbekistan</p>
+        
+            <h3>📞 Phone</h3>
+            <p>+998 917712361</p>
+        </div>
+    
+        <h3 class="sub-heading">💬 Send Me a Message</h3>
+        
+        <form class="contact-form" id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="input-field" required>
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" class="input-field" required>
+    
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" class="textarea-field" rows="5"></textarea>
+    
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Formani yuborishni to‘xtatadi
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                alert("Iltimos, barcha maydonlarni to'ldiring! ❌");
+            } else {
+                alert("Muvaffaqiyatli jo'natildi! ✅");
+                document.getElementById("contactForm").reset(); // Formani tozalaydi
+            }
+        });
+    </script>
+    <script src="./opshi.js"></script>
+
+</body>
+</html>
